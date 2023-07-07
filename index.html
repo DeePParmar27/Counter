@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">    
+<h1>
+    TOTAL NUMBER PEOPLE ENTRED:
+</h1>
+
+<h2 id="count-el">0</h2>
+<button id="btn-count" onclick="incrementaor()">Click</button>
+<button id="btn-saved" onclick="saved()">saved</button>
+<h3>show the previous Entries</h3>
+<h2 id="saved-el"></h2>
+</div>
+
+<script>
+
+
+let countEl=document.getElementById("count-el");
+let savedEl=document.getElementById("saved-el");
+let count=0;
+
+function incrementaor()
+{
+   count = count + 1 
+  countEl.innerText=count
+}
+
+function saved()
+{
+   countStr=count+"-"
+   count=0
+   savedEl.innerText+=countStr
+   countEl.innerText=count
+}
+    
+
+</script>
+</body>
+</html> 
